@@ -1,0 +1,1022 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "",
+    "version": ""
+  },
+  "servers": [
+    {
+      "url": "https://bankwest.gateway.mastercard.com/api/rest/version/51"
+    }
+  ],
+  "paths": {
+    "/information": {
+      "parameters": [],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/3DSecureId/{3DSecureId}": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "in": "path",
+          "name": "3DSecureId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "put": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/amexExpressCheckoutConfiguration": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/amexExpressCheckoutDeleteConfiguration": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/amexExpressCheckoutWalletStatus": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/balanceInquiry": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "put": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/batch": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "put": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/checkoutWalletStatus": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/merchantTestHostType": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/order/{orderid}": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "in": "path",
+          "name": "orderid",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/order/{orderid}/transaction/{transactionid}": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "in": "path",
+          "name": "orderid",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "in": "path",
+          "name": "transactionid",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "put": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/pair": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/paymentOptionsInquiry": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/paymentPlan/{planId}": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "in": "path",
+          "name": "planId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "put": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/session": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/session/{sessionId}": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "in": "path",
+          "name": "sessionId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "put": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/token": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/token/{tokenid}": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "in": "path",
+          "name": "tokenid",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "delete": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "put": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/tokenSearch": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/visaCheckoutConfiguration": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/visaCheckoutDetails": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/walletConfiguration": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/merchant/{merchantId}/walletOptions": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "merchantId",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "post": {
+        "parameters": [
+          {
+            "description": "BASIC Authentication is used, the username is of the format [MERCHANT].[username]",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    }
+  }
+}
