@@ -290,3 +290,31 @@ components:
       type: http
       scheme: basic
       description: Basic HTTP authentication as described at [w3.org](https://www.w3.org/Protocols/HTTP/1.0/spec.html#BasicAA). Provide 'merchant.<your gateway merchant ID>' in the userid portion and your API password in the password portion.
+  responses:
+    errors:
+      description: Errors
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/errors'
+  schemas:
+    errors:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          type: object
+          required:
+            - cause
+          properties:
+            cause:
+              type: string
+            explanation:
+              type: string
+            field:
+              type: string
+            validationType:
+              type: string
+        result:
+          type: string
