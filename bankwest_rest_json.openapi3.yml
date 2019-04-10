@@ -4,10 +4,14 @@ info:
   version: v51
 servers:
 - url: https://bankwest.gateway.mastercard.com/api/rest/version/51
+security:
+- http_basic: []
+
 paths:
   "/information":
     parameters: []
     get:
+      security: []
       responses: {}
   "/merchant/{merchantId}":
     parameters:
@@ -17,13 +21,6 @@ paths:
       schema:
         type: string
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/3DSecureId/{3DSecureId}":
     parameters:
@@ -38,31 +35,10 @@ paths:
       schema:
         type: string
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     put:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/amexExpressCheckoutConfiguration":
     parameters:
@@ -72,22 +48,8 @@ paths:
       schema:
         type: string
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/amexExpressCheckoutDeleteConfiguration":
     parameters:
@@ -97,13 +59,6 @@ paths:
       schema:
         type: string
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/amexExpressCheckoutWalletStatus":
     parameters:
@@ -113,22 +68,8 @@ paths:
       schema:
         type: string
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/balanceInquiry":
     parameters:
@@ -138,13 +79,6 @@ paths:
       schema:
         type: string
     put:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/batch":
     parameters:
@@ -154,13 +88,6 @@ paths:
       schema:
         type: string
     put:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/checkoutWalletStatus":
     parameters:
@@ -170,22 +97,8 @@ paths:
       schema:
         type: string
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/merchantTestHostType":
     parameters:
@@ -195,22 +108,8 @@ paths:
       schema:
         type: string
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/order/{orderid}":
     parameters:
@@ -225,13 +124,6 @@ paths:
       schema:
         type: string
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/order/{orderid}/transaction/{transactionid}":
     parameters:
@@ -251,22 +143,8 @@ paths:
       schema:
         type: string
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     put:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/pair":
     parameters:
@@ -276,13 +154,6 @@ paths:
       schema:
         type: string
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/paymentOptionsInquiry":
     parameters:
@@ -292,13 +163,6 @@ paths:
       schema:
         type: string
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/paymentPlan/{planId}":
     parameters:
@@ -313,13 +177,6 @@ paths:
       schema:
         type: string
     put:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/session":
     parameters:
@@ -329,13 +186,6 @@ paths:
       schema:
         type: string
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/session/{sessionId}":
     parameters:
@@ -350,31 +200,10 @@ paths:
       schema:
         type: string
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     put:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/token":
     parameters:
@@ -384,13 +213,6 @@ paths:
       schema:
         type: string
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/token/{tokenid}":
     parameters:
@@ -405,31 +227,10 @@ paths:
       schema:
         type: string
     delete:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     put:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/tokenSearch":
     parameters:
@@ -439,13 +240,6 @@ paths:
       schema:
         type: string
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/visaCheckoutConfiguration":
     parameters:
@@ -455,22 +249,8 @@ paths:
       schema:
         type: string
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/visaCheckoutDetails":
     parameters:
@@ -480,22 +260,8 @@ paths:
       schema:
         type: string
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/walletConfiguration":
     parameters:
@@ -505,22 +271,8 @@ paths:
       schema:
         type: string
     get:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
   "/merchant/{merchantId}/walletOptions":
     parameters:
@@ -530,11 +282,11 @@ paths:
       schema:
         type: string
     post:
-      parameters:
-      - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
-        in: header
-        name: Authorization
-        required: false
-        schema:
-          type: string
       responses: {}
+
+components:
+  securitySchemes:
+    http_basic:
+      type: http
+      scheme: basic
+      description: Basic HTTP authentication as described at [w3.org](https://www.w3.org/Protocols/HTTP/1.0/spec.html#BasicAA). Provide 'merchant.<your gateway merchant ID>' in the userid portion and your API password in the password portion.
