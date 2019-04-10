@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  title: ''
-  version: ''
+  title: Bankwest Payment Gateway (REST-JSON)
+  version: v51
 servers:
 - url: https://bankwest.gateway.mastercard.com/api/rest/version/51
 paths:
