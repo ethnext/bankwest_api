@@ -8,9 +8,7 @@ paths:
   "/information":
     parameters: []
     get:
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}":
     parameters:
     - in: path
@@ -26,9 +24,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/3DSecureId/{3DSecureId}":
     parameters:
     - in: path
@@ -49,9 +45,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     post:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -60,9 +54,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     put:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -71,9 +63,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/amexExpressCheckoutConfiguration":
     parameters:
     - in: path
@@ -89,9 +79,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     post:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -100,9 +88,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/amexExpressCheckoutDeleteConfiguration":
     parameters:
     - in: path
@@ -118,9 +104,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/amexExpressCheckoutWalletStatus":
     parameters:
     - in: path
@@ -136,9 +120,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     post:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -147,9 +129,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/balanceInquiry":
     parameters:
     - in: path
@@ -165,9 +145,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/batch":
     parameters:
     - in: path
@@ -183,9 +161,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/checkoutWalletStatus":
     parameters:
     - in: path
@@ -201,9 +177,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     post:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -212,9 +186,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/merchantTestHostType":
     parameters:
     - in: path
@@ -230,9 +202,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     post:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -241,9 +211,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/order/{orderid}":
     parameters:
     - in: path
@@ -264,9 +232,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/order/{orderid}/transaction/{transactionid}":
     parameters:
     - in: path
@@ -292,9 +258,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     put:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -303,9 +267,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/pair":
     parameters:
     - in: path
@@ -321,9 +283,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/paymentOptionsInquiry":
     parameters:
     - in: path
@@ -339,9 +299,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/paymentPlan/{planId}":
     parameters:
     - in: path
@@ -362,9 +320,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/session":
     parameters:
     - in: path
@@ -380,9 +336,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/session/{sessionId}":
     parameters:
     - in: path
@@ -403,9 +357,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     post:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -414,9 +366,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     put:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -425,9 +375,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/token":
     parameters:
     - in: path
@@ -443,9 +391,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/token/{tokenid}":
     parameters:
     - in: path
@@ -466,9 +412,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     get:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -477,9 +421,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     put:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -488,9 +430,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/tokenSearch":
     parameters:
     - in: path
@@ -506,9 +446,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/visaCheckoutConfiguration":
     parameters:
     - in: path
@@ -524,9 +462,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     post:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -535,9 +471,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/visaCheckoutDetails":
     parameters:
     - in: path
@@ -553,9 +487,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     post:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -564,9 +496,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/walletConfiguration":
     parameters:
     - in: path
@@ -582,9 +512,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
     post:
       parameters:
       - description: BASIC Authentication is used, the username is of the format [MERCHANT].[username]
@@ -593,9 +521,7 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
   "/merchant/{merchantId}/walletOptions":
     parameters:
     - in: path
@@ -611,6 +537,4 @@ paths:
         required: false
         schema:
           type: string
-      responses:
-        '200':
-          description: Successful Response
+      responses: {}
