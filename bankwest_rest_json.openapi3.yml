@@ -335,6 +335,9 @@ components:
           type: string
     transactionPut:
       type: object
+      required:
+        - transaction
+        - result
       properties:
         authorizationResponse:
           type: object
