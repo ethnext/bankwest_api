@@ -9,4 +9,5 @@ module BankwestAPI
   Errors        = JSI.class_for_schema(Document.components.schemas['errors'])
   TransactionPut = JSI.class_for_schema(Document.components.schemas['transactionPut'])
   Token         = JSI.class_for_schema(Document.components.schemas['token'])
+  SourceOfFunds = JSI.class_for_schema(Document.components.schemas['sourceOfFunds'])
 end

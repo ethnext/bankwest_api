@@ -344,37 +344,7 @@ components:
         result:
           type: string
         sourceOfFunds:
-          type: object
-          properties:
-            provided:
-              type: object
-              properties:
-                card:
-                  type: object
-                  properties:
-                    brand:
-                      type: string
-                    expiry:
-                      type: object
-                      properties:
-                        month:
-                          type: string
-                        year:
-                          type: string
-                    fundingMethod:
-                      type: string
-                    issuer:
-                      type: string
-                    number:
-                      type: string
-                    scheme:
-                      type: string
-                    storedOnFile:
-                      type: string
-            token:
-              type: string
-            type:
-              type: string
+          $ref: '#/components/schemas/sourceOfFunds'
         timeOfRecord:
           type: string
           format: date-time
@@ -453,4 +423,36 @@ components:
               type: string
               format: date-time
         verificationStrategy:
+          type: string
+    sourceOfFunds:
+      type: object
+      properties:
+        provided:
+          type: object
+          properties:
+            card:
+              type: object
+              properties:
+                brand:
+                  type: string
+                expiry:
+                  type: object
+                  properties:
+                    month:
+                      type: string
+                    year:
+                      type: string
+                fundingMethod:
+                  type: string
+                issuer:
+                  type: string
+                number:
+                  type: string
+                scheme:
+                  type: string
+                storedOnFile:
+                  type: string
+        token:
+          type: string
+        type:
           type: string
