@@ -6,6 +6,6 @@ module BankwestAPI
 
   # GENERATED (relying on activesupport) vaguely like
   # puts BankwestAPI::Document.components.schemas.select { |k,v| ['object', nil].include?(v['type']) }.keys.map { |k| "#{k.camelize} = ... '#{k}'" }
-
-  Errors = JSI.class_for_schema(Document.components.schemas['errors'])
+  Errors        = JSI.class_for_schema(Document.components.schemas['errors'])
+  TransactionPut = JSI.class_for_schema(Document.components.schemas['transactionPut'])
 end
