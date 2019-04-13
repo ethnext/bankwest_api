@@ -182,6 +182,57 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  page:
+                    type: object
+                    properties:
+                      token:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            repositoryId:
+                              type: string
+                            sourceOfFunds:
+                              type: object
+                              properties:
+                                provided:
+                                  type: object
+                                  properties:
+                                    card:
+                                      type: object
+                                      properties:
+                                        brand:
+                                          type: string
+                                        expiry:
+                                          type: string
+                                        fundingMethod:
+                                          type: string
+                                        number:
+                                          type: string
+                                        scheme:
+                                          type: string
+                                type:
+                                  type: string
+                            status:
+                              type: string
+                            token:
+                              type: string
+                            usage:
+                              type: object
+                              properties:
+                                lastUpdated:
+                                  type: string
+                                  format: date-time
+                                lastUpdatedBy:
+                                  type: string
+                                lastUsed:
+                                  type: string
+                                  format: date-time
+                            verificationStrategy:
+                              type: string
+                  result:
+                    type: string
   "/merchant/{merchantId}/visaCheckoutConfiguration":
     parameters:
     - $ref: '#/components/parameters/merchantId'
