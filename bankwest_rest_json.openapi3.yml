@@ -216,7 +216,13 @@ paths:
       schema:
         type: string
     post:
-      responses: {}
+      responses:
+        '201':
+          description: Created token
+          content:
+            application/json:
+              schema:
+                type: object
   "/merchant/{merchantId}/token/{tokenid}":
     parameters:
     - in: path
