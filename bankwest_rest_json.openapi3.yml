@@ -15,20 +15,12 @@ paths:
       responses: {}
   "/merchant/{merchantId}":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     post:
       responses: {}
   "/merchant/{merchantId}/3DSecureId/{3DSecureId}":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     - in: path
       name: 3DSecureId
       required: true
@@ -42,82 +34,50 @@ paths:
       responses: {}
   "/merchant/{merchantId}/amexExpressCheckoutConfiguration":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     get:
       responses: {}
     post:
       responses: {}
   "/merchant/{merchantId}/amexExpressCheckoutDeleteConfiguration":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     post:
       responses: {}
   "/merchant/{merchantId}/amexExpressCheckoutWalletStatus":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     get:
       responses: {}
     post:
       responses: {}
   "/merchant/{merchantId}/balanceInquiry":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     put:
       responses: {}
   "/merchant/{merchantId}/batch":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     put:
       responses: {}
   "/merchant/{merchantId}/checkoutWalletStatus":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     get:
       responses: {}
     post:
       responses: {}
   "/merchant/{merchantId}/merchantTestHostType":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     get:
       responses: {}
     post:
       responses: {}
   "/merchant/{merchantId}/order/{orderid}":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     - in: path
       name: orderid
       required: true
@@ -127,11 +87,7 @@ paths:
       responses: {}
   "/merchant/{merchantId}/order/{orderid}/transaction/{transactionid}":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     - in: path
       name: orderid
       required: true
@@ -153,29 +109,17 @@ paths:
 
   "/merchant/{merchantId}/pair":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     post:
       responses: {}
   "/merchant/{merchantId}/paymentOptionsInquiry":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     get:
       responses: {}
   "/merchant/{merchantId}/paymentPlan/{planId}":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     - in: path
       name: planId
       required: true
@@ -185,20 +129,12 @@ paths:
       responses: {}
   "/merchant/{merchantId}/session":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     post:
       responses: {}
   "/merchant/{merchantId}/session/{sessionId}":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     - in: path
       name: sessionId
       required: true
@@ -212,11 +148,7 @@ paths:
       responses: {}
   "/merchant/{merchantId}/token":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     post:
       responses:
         '201':
@@ -227,11 +159,7 @@ paths:
                 type: object
   "/merchant/{merchantId}/token/{tokenid}":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     - in: path
       name: tokenid
       required: true
@@ -245,11 +173,7 @@ paths:
       responses: {}
   "/merchant/{merchantId}/tokenSearch":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     get:
       responses:
         '200':
@@ -260,44 +184,28 @@ paths:
                 type: object
   "/merchant/{merchantId}/visaCheckoutConfiguration":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     get:
       responses: {}
     post:
       responses: {}
   "/merchant/{merchantId}/visaCheckoutDetails":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     get:
       responses: {}
     post:
       responses: {}
   "/merchant/{merchantId}/walletConfiguration":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     get:
       responses: {}
     post:
       responses: {}
   "/merchant/{merchantId}/walletOptions":
     parameters:
-    - in: path
-      name: merchantId
-      required: true
-      schema:
-        type: string
+    - $ref: '#/components/parameters/merchantId'
     post:
       responses: {}
 
@@ -307,6 +215,13 @@ components:
       type: http
       scheme: basic
       description: Basic HTTP authentication as described at [w3.org](https://www.w3.org/Protocols/HTTP/1.0/spec.html#BasicAA). Provide 'merchant.<your gateway merchant ID>' in the userid portion and your API password in the password portion.
+  parameters:
+    merchantId:
+      in: path
+      name: merchantId
+      required: true
+      schema:
+        type: string
   responses:
     errors:
       description: Errors
