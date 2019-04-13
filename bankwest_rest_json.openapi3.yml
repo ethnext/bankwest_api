@@ -145,7 +145,10 @@ paths:
     get:
       responses: {}
     put:
-      responses: {}
+      responses:
+        '201':
+          $ref: '#/components/responses/transactionPut'
+
   "/merchant/{merchantId}/pair":
     parameters:
     - in: path
@@ -297,6 +300,12 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/errors'
+    transactionPut:
+      description: Transaction response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/transactionPut'
   schemas:
     errors:
       type: object
@@ -317,4 +326,146 @@ components:
             validationType:
               type: string
         result:
+          type: string
+    transactionPut:
+      type: object
+      properties:
+        authorizationResponse:
+          type: object
+          properties:
+            commercialCardIndicator:
+              type: string
+            date:
+              type: string
+            processingCode:
+              type: string
+            responseCode:
+              type: string
+            stan:
+              type: string
+            time:
+              type: string
+        gatewayEntryPoint:
+          type: string
+        merchant:
+          type: string
+        order:
+          type: object
+          properties:
+            amount:
+              type: number
+            certainty:
+              type: string
+            chargeback:
+              type: object
+              properties:
+                amount:
+                  type: integer
+                currency:
+                  type: string
+            creationTime:
+              type: string
+              format: date-time
+            currency:
+              type: string
+            custom:
+              type: object
+              properties:
+                pauliePaymentId:
+                  type: string
+                  format: uuid
+                userUuid:
+                  type: string
+                  format: uuid
+            id:
+              type: string
+              format: uuid
+            merchantCategoryCode:
+              type: string
+            status:
+              type: string
+            totalAuthorizedAmount:
+              type: number
+            totalCapturedAmount:
+              type: number
+            totalRefundedAmount:
+              type: number
+        response:
+          type: object
+          properties:
+            acquirerCode:
+              type: string
+            acquirerMessage:
+              type: string
+            gatewayCode:
+              type: string
+        result:
+          type: string
+        sourceOfFunds:
+          type: object
+          properties:
+            provided:
+              type: object
+              properties:
+                card:
+                  type: object
+                  properties:
+                    brand:
+                      type: string
+                    expiry:
+                      type: object
+                      properties:
+                        month:
+                          type: string
+                        year:
+                          type: string
+                    fundingMethod:
+                      type: string
+                    issuer:
+                      type: string
+                    number:
+                      type: string
+                    scheme:
+                      type: string
+                    storedOnFile:
+                      type: string
+            token:
+              type: string
+            type:
+              type: string
+        timeOfRecord:
+          type: string
+          format: date-time
+        transaction:
+          type: object
+          properties:
+            acquirer:
+              type: object
+              properties:
+                batch:
+                  type: integer
+                date:
+                  type: string
+                id:
+                  type: string
+                merchantId:
+                  type: string
+            amount:
+              type: number
+            currency:
+              type: string
+            frequency:
+              type: string
+            id:
+              type: string
+              format: uuid
+            receipt:
+              type: string
+            source:
+              type: string
+            terminal:
+              type: string
+            type:
+              type: string
+        version:
           type: string
