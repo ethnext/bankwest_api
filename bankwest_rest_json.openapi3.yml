@@ -251,7 +251,13 @@ paths:
       schema:
         type: string
     get:
-      responses: {}
+      responses:
+        '200':
+          description: Tokens
+          content:
+            application/json:
+              schema:
+                type: object
   "/merchant/{merchantId}/visaCheckoutConfiguration":
     parameters:
     - in: path
