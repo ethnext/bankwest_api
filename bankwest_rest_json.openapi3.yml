@@ -146,6 +146,8 @@ paths:
       responses: {}
     put:
       responses:
+        '400':
+          $ref: '#/components/responses/errors'
         '201':
           $ref: '#/components/responses/transactionPut'
 
