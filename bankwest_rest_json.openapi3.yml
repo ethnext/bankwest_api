@@ -189,48 +189,7 @@ paths:
                       token:
                         type: array
                         items:
-                          type: object
-                          properties:
-                            repositoryId:
-                              type: string
-                            sourceOfFunds:
-                              type: object
-                              properties:
-                                provided:
-                                  type: object
-                                  properties:
-                                    card:
-                                      type: object
-                                      properties:
-                                        brand:
-                                          type: string
-                                        expiry:
-                                          type: string
-                                        fundingMethod:
-                                          type: string
-                                        number:
-                                          type: string
-                                        scheme:
-                                          type: string
-                                type:
-                                  type: string
-                            status:
-                              type: string
-                            token:
-                              type: string
-                            usage:
-                              type: object
-                              properties:
-                                lastUpdated:
-                                  type: string
-                                  format: date-time
-                                lastUpdatedBy:
-                                  type: string
-                                lastUsed:
-                                  type: string
-                                  format: date-time
-                            verificationStrategy:
-                              type: string
+                          $ref: '#/components/schemas/token'
                   result:
                     type: string
   "/merchant/{merchantId}/visaCheckoutConfiguration":
@@ -451,4 +410,47 @@ components:
             type:
               type: string
         version:
+          type: string
+    token:
+      type: object
+      properties:
+        repositoryId:
+          type: string
+        sourceOfFunds:
+          type: object
+          properties:
+            provided:
+              type: object
+              properties:
+                card:
+                  type: object
+                  properties:
+                    brand:
+                      type: string
+                    expiry:
+                      type: string
+                    fundingMethod:
+                      type: string
+                    number:
+                      type: string
+                    scheme:
+                      type: string
+            type:
+              type: string
+        status:
+          type: string
+        token:
+          type: string
+        usage:
+          type: object
+          properties:
+            lastUpdated:
+              type: string
+              format: date-time
+            lastUpdatedBy:
+              type: string
+            lastUsed:
+              type: string
+              format: date-time
+        verificationStrategy:
           type: string
