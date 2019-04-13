@@ -386,27 +386,6 @@ components:
       properties:
         repositoryId:
           type: string
-        sourceOfFunds:
-          type: object
-          properties:
-            provided:
-              type: object
-              properties:
-                card:
-                  type: object
-                  properties:
-                    brand:
-                      type: string
-                    expiry:
-                      type: string
-                    fundingMethod:
-                      type: string
-                    number:
-                      type: string
-                    scheme:
-                      type: string
-            type:
-              type: string
         status:
           type: string
         token:
@@ -436,12 +415,14 @@ components:
                 brand:
                   type: string
                 expiry:
-                  type: object
-                  properties:
-                    month:
-                      type: string
-                    year:
-                      type: string
+                  anyOf:
+                    - type: string
+                    - type: object
+                      properties:
+                        month:
+                          type: string
+                        year:
+                          type: string
                 fundingMethod:
                   type: string
                 issuer:
