@@ -386,6 +386,8 @@ components:
       properties:
         repositoryId:
           type: string
+        sourceOfFunds:
+          $ref: '#/components/schemas/sourceOfFunds'
         status:
           type: string
         token:
