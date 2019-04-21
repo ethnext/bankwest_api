@@ -10,4 +10,38 @@ module BankwestAPI
   TransactionPut = JSI.class_for_schema(Document.components.schemas['transactionPut'])
   Token         = JSI.class_for_schema(Document.components.schemas['token'])
   SourceOfFunds = JSI.class_for_schema(Document.components.schemas['sourceOfFunds'])
+
+  # @param limit [#to_s]
+  # @param query [#to_hash]
+  # @param faraday_builder [#call]
+  # @param merchantId [#to_s]
+  # @yield [BankwestAPI::Token]
+  def self.each_token(limit: nil, query: nil, faraday_builder: , merchantId: , &block)
+    raise(ArgumentError, "no block given") unless block
+
+    query_params = {}
+    query_params['limit'] = limit if limit
+    query_params['query'] = JSON.generate(query) if query
+    token_search = Document.paths["/merchant/{merchantId}/tokenSearch"]['get'].build_request(
+      faraday_builder: faraday_builder,
+      path_params: {'merchantId' => merchantId},
+      query_params: query_params,
+    )
+    next_page = -> (last_page_ur) do
+      nextPage = last_page_ur.response.body_object['nextPage']
+      request = last_page_ur.scorpio_request.dup
+      if nextPage
+        request.query_params = {'nextPage' => nextPage}
+        request.run_ur
+      else
+        nil
+      end
+    end
+    token_search.each_page_ur(next_page: next_page) do |page_ur|
+      page = page_ur.response.body_object
+      if page['page'] && page['page']['token']
+        page['page']['token'].each(&block)
+      end
+    end
+  end
 end
