@@ -192,6 +192,8 @@ paths:
               schema:
                 type: object
                 properties:
+                  nextPage:
+                    type: string
                   page:
                     type: object
                     properties:
