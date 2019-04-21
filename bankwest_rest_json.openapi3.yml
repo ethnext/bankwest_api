@@ -166,7 +166,16 @@ paths:
       schema:
         type: string
     delete:
-      responses: {}
+      responses:
+        '200':
+          description: Result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: string
     get:
       responses: {}
     put:
