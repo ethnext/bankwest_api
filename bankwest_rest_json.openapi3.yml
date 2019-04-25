@@ -18,11 +18,11 @@ paths:
     - $ref: '#/components/parameters/merchantId'
     post:
       responses: {}
-  "/merchant/{merchantId}/3DSecureId/{3DSecureId}":
+  "/merchant/{merchantId}/3DSecureId/{_3DSecureId}":
     parameters:
     - $ref: '#/components/parameters/merchantId'
     - in: path
-      name: 3DSecureId
+      name: _3DSecureId
       required: true
       schema:
         type: string
