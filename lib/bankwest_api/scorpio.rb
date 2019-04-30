@@ -46,4 +46,17 @@ module BankwestAPI
       end
     end
   end
+
+  class Card
+    def prefix
+      number_match['prefix']
+    end
+    def suffix
+      number_match['suffix']
+    end
+    def number_match
+      return @number_match if instance_variable_defined?(:@number_match)
+      @number_match = number && number.match(/\A(?<prefix>\d+)x+(?<suffix>\d+)\z/)
+    end
+  end
 end
