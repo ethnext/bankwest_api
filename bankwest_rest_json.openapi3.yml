@@ -429,6 +429,30 @@ components:
               format: date-time
         verificationStrategy:
           type: string
+    card:
+      type: object
+      properties:
+        brand:
+          type: string
+        expiry:
+          anyOf:
+            - type: string
+            - type: object
+              properties:
+                month:
+                  type: string
+                year:
+                  type: string
+        fundingMethod:
+          type: string
+        issuer:
+          type: string
+        number:
+          type: string
+        scheme:
+          type: string
+        storedOnFile:
+          type: string
     sourceOfFunds:
       type: object
       properties:
@@ -436,29 +460,7 @@ components:
           type: object
           properties:
             card:
-              type: object
-              properties:
-                brand:
-                  type: string
-                expiry:
-                  anyOf:
-                    - type: string
-                    - type: object
-                      properties:
-                        month:
-                          type: string
-                        year:
-                          type: string
-                fundingMethod:
-                  type: string
-                issuer:
-                  type: string
-                number:
-                  type: string
-                scheme:
-                  type: string
-                storedOnFile:
-                  type: string
+              $ref: '#/components/schemas/card'
         token:
           type: string
         type:

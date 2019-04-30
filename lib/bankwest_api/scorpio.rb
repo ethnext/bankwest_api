@@ -11,6 +11,7 @@ module BankwestAPI
   TransactionPutResponse = JSI.class_for_schema(Document.components.schemas['transactionPutResponse'])
   Token         = JSI.class_for_schema(Document.components.schemas['token'])
   SourceOfFunds = JSI.class_for_schema(Document.components.schemas['sourceOfFunds'])
+  Card         = JSI.class_for_schema(Document.components.schemas['card'])
 
   # @param limit [#to_s]
   # @param query [#to_hash]
