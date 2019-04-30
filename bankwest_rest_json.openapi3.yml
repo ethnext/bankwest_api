@@ -255,7 +255,7 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/transactionPut'
+            $ref: '#/components/schemas/transactionPutResponse'
   schemas:
     errors:
       type: object
@@ -277,7 +277,20 @@ components:
               type: string
         result:
           type: string
-    transactionPut:
+    transactionPutRequest:
+      type: object
+      required:
+        - apiOperation
+      properties:
+        apiOperation:
+          type: string
+        transaction:
+          type: object # TODO $ref
+        order:
+          $ref: '#/components/schemas/order'
+        sourceOfFunds:
+          $ref: '#/components/schemas/sourceOfFunds'
+    transactionPutResponse:
       type: object
       required:
         - transaction
