@@ -410,6 +410,13 @@ components:
       properties:
         repositoryId:
           type: string
+        response:
+          type: object
+          properties:
+            gatewayCode:
+              type: string
+        result:
+          type: string
         sourceOfFunds:
           $ref: '#/components/schemas/sourceOfFunds'
         status:
