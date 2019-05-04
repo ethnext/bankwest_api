@@ -472,3 +472,4 @@ components:
           type: string
         type:
           type: string
+          enum: [CARD, EBT_CARD, GIFT_CARD, SCHEME_TOKEN]
