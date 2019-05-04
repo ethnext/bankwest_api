@@ -59,4 +59,30 @@ module BankwestAPI
       @number_match = number && number.match(/\A(?<prefix>\d+)x+(?<suffix>\d+)\z/)
     end
   end
+
+  class Token
+    # @return [Scorpio::Request]
+    def self.create_template(merchantId)
+      BankwestAPI::Document.paths['/merchant/{merchantId}/token']['post'].build_request(
+        headers: {'Authorization' => "Basic {{#base64}}merchant.{{gateway_merchant_id}}:{{api_password}}{{/base64}}"},
+        media_type: 'application/json',
+        path_params: {'merchantId' => merchantId},
+        body_object: {
+          'sourceOfFunds' => {
+            'provided' => {
+              'card' => {
+                'expiry' => {
+                  'month' => '{{credit_card_month}}',
+                  'year' => '{{#last}}2,{{credit_card_year}}{{/last}}', # 2 digit year
+                },
+                'number' => '{{credit_card_number}}',
+                'securityCode' => '{{credit_card_verification_value}}',
+              },
+            },
+            'type' => 'CARD',
+          }
+        }
+      )
+    end
+  end
 end
