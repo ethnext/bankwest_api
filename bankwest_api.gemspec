@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name = "bankwest_api"
-  spec.version = "0.0.1"
+  spec.version = "0.0.2"
   # transformative work from source:
   #   https://paymentgateway.commbank.com.au/api/documentation/apiDocumentation/
   # REST (Representational State Transfer)
@@ -8,6 +8,6 @@ Gem::Specification.new do |spec|
   # by Ethan at VenueNext
   spec.author = "Ethan/VenueNext"
   spec.summary = "bankwest api"
-  spec.files = %w(bankwest_rest_json.openapi3.yml bankwest_rest_json.wadl.xml lib/bankwest_api.rb)
+  spec.files = `git ls-files -z`.split("\x0")
   spec.require_paths = ["lib"]
 end
