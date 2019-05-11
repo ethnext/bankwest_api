@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name = "bankwest_api"
-  spec.version = "0.0.2"
+  spec.version = "0.0.3"
   # transformative work from source:
   #   https://paymentgateway.commbank.com.au/api/documentation/apiDocumentation/
   # REST (Representational State Transfer)
